@@ -8,3 +8,5 @@ Description: Functions commonly used at SLU Aqua
 License: private
 Encoding: UTF-8
 LazyData: true
+URL: https://github.com/SLU-marten/aqua
+BugReports: https://github.com/SLU-marten/aqua/issues
