@@ -11,3 +11,11 @@ LazyData: true
 URL: https://github.com/SLU-marten/aqua
 BugReports: https://github.com/SLU-marten/aqua/issues
 RoxygenNote: 7.2.1
+Imports: 
+    classInt,
+    dplyr,
+    ggplot2,
+Remotes: 
+    kagervall/SLUcolors
+Depends: 
+    R (>= 2.10)
