@@ -1,0 +1,10 @@
+Package: aqua
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Author: Mårten Erlandsson
+Maintainer: Mårten Erlandsson <marten.erlandsson@slu.se>
+Description: Functions commonly used at SLU Aqua
+License: private
+Encoding: UTF-8
+LazyData: true
