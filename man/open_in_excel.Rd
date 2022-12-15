@@ -3,6 +3,9 @@
 \name{open_in_excel}
 \alias{open_in_excel}
 \title{Open in Excel}
+\usage{
+open_in_excel(.data)
+}
 \arguments{
 \item{.data}{A data.frame that you want to open in excel}
 }

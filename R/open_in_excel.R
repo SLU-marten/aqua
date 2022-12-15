@@ -5,11 +5,10 @@
 #' @param .data A data.frame that you want to open in excel
 #'
 #' @return Returns same data as input
-#' @export
 #'
 #' @examples
 #' open_in_excel(iris)
-function (.data)
+open_in_excel <- function (.data)
 {
   if (interactive()) {
     tmp <- tempfile(fileext = ".csv")
