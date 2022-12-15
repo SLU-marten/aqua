@@ -15,7 +15,8 @@
 rasterPlot <- function(rast,
                        sluCol = "red",
                        classMethod = FALSE,
-                       nClass = 5){
+                       nClass = 5,
+                       rev = FALSE){
   rast_df <- raster::as.data.frame(rast, xy = TRUE) |>
     na.omit() |>
     dplyr::arrange(desc(names(rast)))
@@ -35,9 +36,11 @@ rasterPlot <- function(rast,
 
   p <- ggplot2::ggplot() +
     ggplot2::geom_raster(data = rast_df, ggplot2::aes_string(x="x", y="y", fill = "brks")) +
-    SLUcolors::scale_fill_SLU(palette = sluCol, discrete = disc, na.value = "transparent") +
+    SLUcolors::scale_fill_SLU(palette = sluCol, discrete = disc, na.value = "transparent", reverse = rev) +
     ggplot2::xlim(min(rast_df$x), max(rast_df$x)) +
     ggplot2::ylim(min(rast_df$y), max(rast_df$y)) +
-    ggplot2::theme_classic()
+    ggplot2::theme_classic() +
+    xlab("Longitude") +
+    ylab("Latitude")
   p
 }

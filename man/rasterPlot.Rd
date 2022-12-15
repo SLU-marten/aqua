@@ -4,7 +4,7 @@
 \alias{rasterPlot}
 \title{rasterPlot}
 \usage{
-rasterPlot(rast, sluCol = "red", classMethod = FALSE, nClass = 5)
+rasterPlot(rast, sluCol = "red", classMethod = FALSE, nClass = 5, rev = FALSE)
 }
 \arguments{
 \item{rast}{The data to be displayed in this layer.}
