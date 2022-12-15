@@ -26,7 +26,11 @@ rasterPlot <- function(rast,
   if(classMethod != FALSE){
     rasterClass <- classInt::classIntervals(rast_df[,3], nClass, style = classMethod)
     brks <- rasterClass$brks
-    rast_df$brks <- cut(rast_df[,3], breaks = brks)
+    lbl <- c()
+    for(i in 1:length(brks)-1){
+      lbl[i] <- paste(round(brks[i], 2), "-", round(brks[i+1], 2))
+    }
+    rast_df$brks <- cut(rast_df[,3], breaks = brks, labels = lbl)
   }
 
   p <- ggplot2::ggplot() +
