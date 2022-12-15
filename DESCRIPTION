@@ -2,9 +2,9 @@ Package: aqua
 Type: Package
 Title: Aqua functions
 Version: 0.0.9
-Author: Mårten Erlandsson
-Maintainer: Mårten Erlandsson <marten.erlandsson@slu.se>
-Description: Functions commonly used at SLU Aqua
+Authors@R: 
+    person("Mårten", "Erlandsson", , "marten.erlandsson@slu.se", role = c("aut", "cre"))
+Description: Functions commonly used at SLU Aqua.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

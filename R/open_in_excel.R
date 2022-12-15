@@ -1,10 +1,9 @@
 #' Open in Excel
 #'
-#' @name open_in_excel
+#' @param .data A dataframe that will be opened in Excel.
 #'
-#' @param .data A data.frame that you want to open in excel
-#'
-#' @return Returns same data as input
+#' @return Same as input
+#' @export
 #'
 #' @examples
 #' open_in_excel(iris)

@@ -7,10 +7,10 @@
 open_in_excel(.data)
 }
 \arguments{
-\item{.data}{A data.frame that you want to open in excel}
+\item{.data}{A dataframe that will be opened in Excel.}
 }
 \value{
-Returns same data as input
+Same as input
 }
 \description{
 Open in Excel
