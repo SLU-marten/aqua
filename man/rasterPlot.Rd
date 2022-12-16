@@ -21,6 +21,8 @@ rasterPlot(
 \item{classMethod}{Choose raster classification method. If missing the data is plot as continous. Valid options are "fixed", "sd", "equal", "pretty", "quantile", "kmeans", "hclust", "bclust", "fisher", "jenks", "dpih", "headtails", or "maximum"}
 
 \item{nClass}{number of classes}
+
+\item{rev}{Reverse color}
 }
 \value{
 A ggplot object

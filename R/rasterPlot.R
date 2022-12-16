@@ -4,6 +4,7 @@
 #' @param sluCol Choose color scheme. Valid options are "all", "red", "green", "blue", "yellow" or "grey"
 #' @param classMethod Choose raster classification method. If missing the data is plot as continous. Valid options are "fixed", "sd", "equal", "pretty", "quantile", "kmeans", "hclust", "bclust", "fisher", "jenks", "dpih", "headtails", or "maximum"
 #' @param nClass number of classes
+#' @param rev Reverse color
 #'
 #' @return A ggplot object
 #' @export
