@@ -1,7 +1,7 @@
 Package: aqua
 Type: Package
 Title: Aqua functions
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: 
     person("Mårten", "Erlandsson", , "marten.erlandsson@slu.se", role = c("aut", "cre"))
 Description: Functions commonly used at SLU Aqua.
@@ -13,8 +13,14 @@ BugReports: https://github.com/SLU-marten/aqua/issues
 RoxygenNote: 7.2.1
 Imports: 
     classInt,
+    cowplot,
     dplyr,
     ggplot2,
+    ggspatial,
+    ggthemes,
+    rnaturalearth,
+    rnaturalearthhires,
+    sf
 Remotes: 
     kagervall/SLUcolors
 Depends: 

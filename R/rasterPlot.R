@@ -16,7 +16,8 @@ rasterPlot <- function(rast,
                        sluCol = "red",
                        classMethod = FALSE,
                        nClass = 5,
-                       rev = FALSE){
+                       rev = FALSE,
+                       legendTitle = ""){
   rast_df <- raster::as.data.frame(rast, xy = TRUE) |>
     na.omit() |>
     dplyr::arrange(desc(names(rast)))
@@ -41,6 +42,8 @@ rasterPlot <- function(rast,
     ggplot2::ylim(min(rast_df$y), max(rast_df$y)) +
     ggplot2::theme_classic() +
     xlab("Longitude") +
-    ylab("Latitude")
+    ylab("Latitude")+
+    guides(fill=ggplot2::guide_legend(title = legendTitle))
+
   p
 }
