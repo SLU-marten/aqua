@@ -1,14 +1,15 @@
 #' insetMap
 #'
 #' @param map A ggplot map
+#' @param rast A raster defining the inset area
 #'
 #' @return Map with inset
 #' @export
 #'
 #' @examples
 #' insetMap(map)
-insetMap <- function (map){
-  ins <- sf::st_as_sfc(sf::st_bbox(map))
+insetMap <- function (map, rast){
+  ins <- sf::st_as_sfc(sf::st_bbox(rast))
   europe <- rnaturalearth::ne_countries(continent = 'europe', returnclass = "sf", scale = "large")
   m2 <- ggplot2::ggplot() +
     ggplot2::geom_sf(data = europe) +

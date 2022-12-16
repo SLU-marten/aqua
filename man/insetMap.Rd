@@ -4,10 +4,12 @@
 \alias{insetMap}
 \title{insetMap}
 \usage{
-insetMap(map)
+insetMap(map, rast)
 }
 \arguments{
 \item{map}{A ggplot map}
+
+\item{rast}{A raster defining the inset area}
 }
 \value{
 Map with inset
