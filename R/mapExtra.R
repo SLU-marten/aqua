@@ -14,7 +14,7 @@ mapExtra <- function (map, land = TRUE, northArrow = TRUE, scalebar = TRUE){
   if(land){
     europe <- rnaturalearth::ne_countries(continent = 'europe', returnclass = "sf", scale = "large")
     map <- map +
-      ggplot2::geom_sf()
+      ggplot2::geom_sf(data = europe)
   }
   if(scalebar){
     map <- map +
@@ -33,6 +33,5 @@ mapExtra <- function (map, land = TRUE, northArrow = TRUE, scalebar = TRUE){
           line_col = "grey20")
       )
   }
-
   map
 }
