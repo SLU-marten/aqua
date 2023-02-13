@@ -10,7 +10,7 @@
 #'
 #' @examples
 #' mapExtra(map, scalebar = FALSE)
-mapExtra <- function (map, land = TRUE, northArrow = TRUE, scalebar = TRUE){
+mapExtra <- function (map, land = TRUE, northArrow = TRUE, scalebar = TRUE, position = "bl"){
   if(land){
     europe <- rnaturalearth::ne_countries(continent = 'europe', returnclass = "sf", scale = "large")
     map <- map +
@@ -19,13 +19,13 @@ mapExtra <- function (map, land = TRUE, northArrow = TRUE, scalebar = TRUE){
   if(scalebar){
     map <- map +
       ggspatial::annotation_scale(
-        location = "bl",
+        location = position,
         bar_cols = c("grey60", "white"))
   }
   if(northArrow){
     map <- map +
       ggspatial::annotation_north_arrow(
-        location = "bl", which_north = "true",
+        location = position, which_north = "true",
         # pad_x = unit(0.4, "in")
         pad_y = unit(0.4, "in"),
         style = ggspatial::north_arrow_fancy_orienteering(
