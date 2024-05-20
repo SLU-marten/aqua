@@ -22,22 +22,22 @@ rasterPlot <- function(rast,
   rast_df <- raster::as.data.frame(rast, xy = TRUE) |>
     na.omit() |>
     dplyr::arrange(desc(names(rast)))
-  rast_df$brks <- rast_df[,3]
+  rast_df$brks <- rast_df[, 3]
   disc <- ifelse(classMethod == FALSE, FALSE, TRUE)
 
   # Classify
   if(classMethod != FALSE){
-    rasterClass <- classInt::classIntervals(rast_df[,3], nClass, style = classMethod)
+    rasterClass <- classInt::classIntervals(rast_df[, 3], nClass, style = classMethod)
     brks <- rasterClass$brks
     lbl <- c()
-    for(i in 1:length(brks)-1){
-      lbl[i] <- paste(round(brks[i], 2), "-", round(brks[i+1], 2))
+    for(i in 1:length(brks) - 1){
+      lbl[i] <- paste(round(brks[i], 2), "-", round(brks[i + 1], 2))
     }
-    rast_df$brks <- cut(rast_df[,3], breaks = brks, labels = lbl)
+    rast_df$brks <- cut(rast_df[, 3], breaks = unique(brks), labels = unique(lbl))
   }
 
   p <- ggplot2::ggplot() +
-    ggplot2::geom_raster(data = rast_df, ggplot2::aes_string(x="x", y="y", fill = "brks")) +
+    ggplot2::geom_raster(data = rast_df, ggplot2::aes_string(x = "x", y = "y", fill = "brks")) +
     SLUcolors::scale_fill_SLU(palette = sluCol, discrete = disc, na.value = "transparent", reverse = rev) +
     ggplot2::xlim(min(rast_df$x), max(rast_df$x)) +
     ggplot2::ylim(min(rast_df$y), max(rast_df$y)) +

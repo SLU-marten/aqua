@@ -13,7 +13,7 @@ insetMap <- function (map, rast){
   europe <- rnaturalearth::ne_countries(continent = 'europe', returnclass = "sf", scale = "large")
   m2 <- ggplot2::ggplot() +
     ggplot2::geom_sf(data = europe) +
-    ggplot2::geom_sf(data = ins, color = "red", fill = NA, size = 0.1) +
+    ggplot2::geom_sf(data = ins, color = "red", fill = NA, size = 0.5) +
     xlim(0, 30) +
     ylim(50, 70) +
     ggthemes::theme_map() +

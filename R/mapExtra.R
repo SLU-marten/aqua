@@ -4,6 +4,7 @@
 #' @param land Includes a background map
 #' @param northArrow Includes a north arrow
 #' @param scalebar Includes a scale bar
+#' @param position Position of scalebar and north arrow
 #'
 #' @return Same as input
 #' @export
