@@ -1,7 +1,7 @@
 Package: aqua
 Type: Package
 Title: Aqua functions
-Version: 0.1.2
+Version: 0.1.3
 Authors@R: 
     person("Mårten", "Erlandsson", , "marten.erlandsson@slu.se", role = c("aut", "cre"))
 Description: Functions commonly used at SLU Aqua.
