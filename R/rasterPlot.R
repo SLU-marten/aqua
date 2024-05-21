@@ -28,6 +28,7 @@ rasterPlot <- function(rast,
   # Classify
   if(classMethod != FALSE){
     rasterClass <- classInt::classIntervals(rast_df[, 3], nClass, style = classMethod)
+    rasterClass$brks[2:length(rasterClass$brks)] <- rasterClass$brks[2:length(rasterClass$brks)] + 0.00000001
     brks <- unique(rasterClass$brks)
     lbl <- c()
     for(i in 1:length(brks) - 1){
